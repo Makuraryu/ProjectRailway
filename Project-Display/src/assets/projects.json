@@ -1,0 +1,42 @@
+[
+    {
+        "name": "枕流阁",
+        "alias": "Blog",
+        "link": "https://Makuraryu.vercel.app",
+        "stack": ["Astro","CSS","Javascript"],
+        "tags":["Frontend"],
+        "description": "我的个人博客，基于 Astro 框架，以简洁的设计和丝滑流畅的用户体验为核心，并且支持夜间主题等多种隐藏功能。"
+    },
+    {
+        "name": "Colouir",
+        "alias": "Color",
+        "link": "https://colouir.vercel.app",
+        "stack": ["Vue.js","CSS","Javascript"],
+        "tags":["Frontend","Webapp"],
+        "description": "色彩可视化工具，提供色盘浏览和多种色彩编码格式的选择，支持历史保存等功能。基于 Vue.js 开发。"
+    },
+    {
+        "name": "枕流起始页",
+        "alias": "Homepage",
+        "link": "https://makuraryu.github.io/MR-starter-main/index.html",
+        "stack": ["HTML","CSS","Javascript"],
+        "tags":["Frontend","Webapp"],
+        "description": "一个极简风格的搜索起始页，设计简洁美观。使用前端技术实现丝滑流畅的用户交互体验。"
+    },
+    {
+      "name": "中文简繁体转换器",
+      "alias": "Converter",
+      "link": "https://github.com/Makuraryu/Chinese-Converter",
+      "stack": ["Python","Flask","JavaScript"],
+      "tags":["Backend","Frontend","Large Language Model"],
+      "description": "在校期间的实习项目，基于大语言模型开发的中文简繁体转换器，支持文本、图片和 PDF 的转换。并开发了 API 接口和完整地前端页面。"
+    },
+    {
+        "name":"开往《列车》重定向页面",
+        "alias":"Travelling",
+        "link":"https://github.com/Travellings-link/Travellings",
+        "stack":["HTML","CSS","JavaScript"],
+        "tags":["Frontend","Open Source"],
+        "description":"一个简单的重定向页面，用户访问后自动跳转到指定的列车信息页面。"
+    }
+]
