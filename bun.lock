@@ -1,0 +1,13 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "dependencies": {
+        "animejs": "^4.1.3",
+      },
+    },
+  },
+  "packages": {
+    "animejs": ["animejs@4.1.3", "", {}, "sha512-4XzlIsQsku1ycSPzchxxT0N+ohEMZObG71nOSBBkZoV4sgQvtXa/qAANkFpTE6pegdV8JnIBZiB0LfdxNoRNMw=="],
+  }
+}

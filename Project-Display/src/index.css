@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+
+:root{
+    /* colors */
+    --theme: 0.7493 0.1369 135.4864;
+    --themedec: 0.8399 0.0661 156.3551;
+    --medal1: 0.9578 0.0057 264.4935;
+    --medal2: 0.8575 0.0145 268.4782;
+    --medal3: 0.8083 0.0174 271.1974;
+    --dark: 0.2622 0.0581 254.7864;
+    --frame:0.651 0.0351 206.022;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

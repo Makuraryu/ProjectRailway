@@ -1,0 +1,181 @@
+#railway {
+    /* basics */
+    --height: 100vh;
+
+    /* kabe settings */
+    --gradtop: 20%;
+    --gradbot: 60%;
+    --window-width: 70%;
+    --pinstripe: 3px;
+    --windowpad: 15px;
+    --framesize: 5px;
+    --kabewidth:300px;
+    /* door settings */
+    --doorwidth: 60vw;
+    --doorheight: calc(var(--height) * 0.9);
+    --doorwindowwidth: calc(var(--doorwidth) * 0.6 / 2);
+    --doorwindowheight: 40%;
+    --doorwindowtop: 20%;
+    /* doorwidth是门的大小，doawidth是门那一节车厢的大小 */
+    --doawidth:calc(var(--doorwidth) / 0.7);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: var(--height);
+    width: auto;
+    
+
+}
+
+/* wall负责背景，kabe负责开窗，door负责开门的框, doorwrapper把真实的门的渲染放到正确的位置，并框定大小 */
+
+.kabewrapper{
+    flex: 0 0 auto;
+    position: relative;
+    width: var(--kabewidth);
+    height: 100%;
+}
+
+.wall{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, oklch(var(--medal1)),oklch(var(--medal2)) var(--gradtop), oklch(var(--medal3)) var(--gradtop),oklch(var(--medal3)) var(--gradbot),oklch(var(--medal2)) var(--gradbot),oklch(var(--medal1)));
+}
+.wall::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--pinstripe);
+    background-color: oklch(var(--theme));
+    top: calc(var(--gradbot) + 5%);
+
+}
+.kabe{
+    position: absolute;
+    clip-path: polygon(
+        0 0,
+        calc((100% - var(--window-width)) / 2) 0,
+        calc((100% - var(--window-width)) / 2) calc(var(--gradbot) - var(--windowpad)),
+        calc((100% + var(--window-width)) / 2) calc(var(--gradbot) - var(--windowpad)),
+        calc((100% + var(--window-width)) / 2) calc(var(--gradtop) + var(--windowpad)),
+        calc((100% - var(--window-width)) / 2) calc(var(--gradtop) + var(--windowpad)),
+        calc((100% - var(--window-width)) / 2) 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
+.window{
+    position: absolute;
+    width: var(--window-width);
+    height: calc(var(--gradbot) - var(--gradtop) - (2 * var(--windowpad) ));
+    left: calc(((100% - var(--window-width)) / 2) - var(--framesize));
+    top: calc((var(--gradtop) + var(--windowpad)) - var(--framesize));
+    background-color: oklch(var(--dark) / 0.8);
+    border: var(--framesize) solid oklch(var(--frame));
+    border-radius: 10px;
+    box-shadow: 
+    inset 0 0 10px 10px oklch(var(--dark) / 0.1),
+    0 0 5px 5px oklch(var(--dark) / 0.1);
+
+}
+
+
+.doorslot{
+    flex: 0 0 auto;
+    position: relative;
+    width: var(--doawidth);
+    height: 100%;
+}
+
+.doorframe{
+    position: absolute;
+    width: var(--doorwidth);
+    height: var(--doorheight);
+    left: calc(((100% - var(--doorwidth)) / 2) - var(--framesize));
+    top: calc(((100% - var(--doorheight)) / 2) - var(--framesize));
+    border: var(--framesize) solid oklch(var(--frame));
+    border-radius: 10px;
+    transition: box-shadow 0.2s;
+    box-shadow: 
+    inset 0 0 10px 10px oklch(var(--dark) / var(--doorinsha)),
+    0 0 5px 5px oklch(var(--dark) / 0.1);
+}
+
+.doorwrapper{
+    position: absolute;
+    width: var(--doawidth);
+    height: 100%;
+    left: var(--kabewidth);
+}
+
+.door{
+    position: absolute;
+    clip-path: polygon(
+        0 0,
+        calc((100% - var(--doorwidth)) / 2) 0,
+        calc((100% - var(--doorwidth)) / 2)  calc((100% + var(--doorheight)) / 2),
+        calc((100% + var(--doorwidth)) / 2)  calc((100% + var(--doorheight)) / 2),
+        calc((100% + var(--doorwidth)) / 2)  calc((100% - var(--doorheight)) / 2),
+        calc((100% - var(--doorwidth)) / 2)  calc((100% - var(--doorheight)) / 2),
+        calc((100% - var(--doorwidth)) / 2) 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+/* doors 负责限定门的范围 */
+.doors{
+    position: absolute;
+    width: var(--doorwidth);
+    left: 15%;
+    top: calc((100% - var(--doorheight)) / 2);
+    height: var(--doorheight);
+}
+.doorpanel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+.leftdoor{
+    left: 0;
+}
+.rightdoor{
+    right: 0;
+}
+
+.doa{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, oklch(var(--theme)),oklch(var(--themedec)), oklch(var(--theme)));
+    clip-path: polygon(
+        0 0,
+        calc((100% - var(--doorwindowwidth)) / 2) 0,
+        calc((100% - var(--doorwindowwidth)) / 2) calc(var(--doorwindowtop) + var(--doorwindowheight)),
+        calc((100% + var(--doorwindowwidth)) / 2) calc(var(--doorwindowtop) + var(--doorwindowheight)),
+        calc((100% + var(--doorwindowwidth)) / 2) calc(var(--doorwindowtop)),
+        calc((100% - var(--doorwindowwidth)) / 2) calc(var(--doorwindowtop)),
+        calc((100% - var(--doorwindowwidth)) / 2) 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+}
+.doaglass{
+    position: absolute;
+    background-color: oklch(var(--dark) / 0.8);
+    width: var(--doorwindowwidth);
+    height: var(--doorwindowheight);
+    left: calc((100% - var(--doorwindowwidth)) / 2 - var(--framesize));
+    top: calc(var(--doorwindowtop) - var(--framesize));
+    border: var(--framesize) solid oklch(var(--frame));
+    border-radius: 5px;
+    box-shadow: 
+    inset 0 0 5px 5px oklch(var(--dark) / 0.1),
+    0 0 5px 5px oklch(var(--dark) / 0.1);
+}
