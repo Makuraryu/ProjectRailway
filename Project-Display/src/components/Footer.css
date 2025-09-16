@@ -1,0 +1,60 @@
+.footerFooter{
+    --background: 247, 217, 76;
+    --black: 11, 16, 19;
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgb(var(--background));
+    font-family: "Noto Sans SC", sans-serif;
+    color: rgb(var(--black));
+
+    
+}
+.footerPadding{
+    position: relative;
+    height: 100vh;
+    top: 40px;
+    left: 40px;
+}
+.footerDirection{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(var(--black));
+    clip-path: polygon(
+        0 0,
+        80% 0,
+        100% 20%,
+        35% 20%,
+        100% 85%,
+        85% 100%,
+        20% 35%,
+        20% 100%,
+        0 80%,
+        0 100%
+    );
+}
+.footerTitle{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.footerEng{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 200;
+
+}
+.footerLine{
+    position: relative;
+    width: 40%;
+    height: 2px;
+    background-color: rgb(var(--black));
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

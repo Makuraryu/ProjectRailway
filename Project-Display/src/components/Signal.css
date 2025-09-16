@@ -1,35 +1,36 @@
 
-.sign{
+.signalSign{
     --lighter: 0.9578 0.0057 264.4935;
     --light: 0.8575 0.0145 268.4782;
     --dark:0.2188 0.0254 280.6649;
-    --width: 60vw;
+    --width: calc(25vw - 20px);
+    --theme: 0.7493 0.1369 135.4864;
+    --themedec: 0.7349 0.0605 146.3925;
     position: relative;
     width: var(--width);
-    aspect-ratio: 4 / 1;
     background: radial-gradient(oklch(var(--lighter)),oklch(var(--light)));
-    position: relative;
     border-top: calc(var(--width) / 16) solid oklch(var(--dark));
     border-bottom: calc(var(--width) / 40) solid oklch(var(--dark));
     border-left: calc(var(--width) / 80) solid oklch(var(--dark));
     border-right: calc(var(--width) / 80) solid oklch(var(--dark));
     box-shadow: inset 0 0 10px 10px oklch(var(--dark) / 0.1);
     font-family: "Noto Sans SC", sans-serif;
-
 }
 
 a{
     text-decoration: none;
 }
-.title{
+.signalTitle{
     position: relative;
     height: calc(var(--width) / 10);
     margin-bottom: calc(var(--width) / 40);
+    margin-top: calc(var(--width) / 30);
     
 }
-.stationtitle{
+.signalStationTitle{
     position: absolute;
     width: 100%;
+    min-width: 0; 
     font-size: calc(var(--width) / 20);
     color: oklch(var(--dark));
     bottom: 0;
@@ -38,11 +39,14 @@ a{
     font-weight: 900;
     font-size: calc(var(--width) / 14);
     line-height: calc(var(--width) / 14);
-    letter-spacing: 1em;
-    text-indent: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
 }
 
-.direction{
+.signalDirection{
     position: relative;
     height: calc(var(--width) / 16);
     background-color: oklch(var(--theme));
@@ -54,7 +58,7 @@ a{
         calc(var(--width) / 40 * 3) 50%
     );
 }
-.direction::before{
+.signalDirection::before{
     position: absolute;
     display: block;
     content: '';
@@ -64,7 +68,7 @@ a{
     background-color: oklch(var(--themedec));
     
 }
-.nav{
+.signalNav{
     padding: 0;
     position: absolute;
     font-size: calc(var(--width) / 24);
@@ -82,37 +86,53 @@ a{
 
 
 }
-.next{
+.signalNext{
     left: calc(var(--width) / 6);
 }
-.prev{
+.signalPrev{
     right: calc(var(--width) / 20);
 }
-.alias{
+.signalAlias{
     height: calc(var(--width) / 16);
+    margin-top: calc(var(--width) / 40);
+    margin-bottom: calc(var(--width) / 20);
+
 }
-.alia{
+.signalAlia{
     color: oklch(var(--dark));
     position: absolute;
     font-size: calc(var(--width) / 36);
     margin: 0;
+    width: 20%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 
 }
-.titlealia{
+.signalTitleAlia{
     width: 100%;
     text-align: center;
     font-weight: 800;
 
 }
-.nextalia{
+.signalNextAlia{
     left: calc(var(--width) / 6);
     font-weight: 600;
 
 
 }
-.prevalia{
+.signalPrevAlia{
     right: calc(var(--width) / 20);
     font-weight: 600;
 
+}
 
+.signalOff{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: oklch(var(--dark));
+    opacity: 0.8;
+    top: 0;
+    pointer-events: none;
 }

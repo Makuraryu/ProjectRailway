@@ -30,12 +30,6 @@ function Projects({ viewwidth, index, data, plusIndex, minusIndex }: Data){
     let [doorinsha, setdoorinsha] = useState(0.05);
 
     useEffect(() => {
-        onScroll({
-            target: "#content",
-            container: ".project",
-            debug: true,
-        })
-
 
 
         createTimeline({defaults: {duration:5000}})

@@ -1,34 +1,83 @@
 import "./Signal.css"
-type SignalProps = {
-    title: string,
-    link: string,
-    alias: string
-}
+import { createTimeline } from 'animejs';
+import { useEffect } from "react"
 
 type Props = {
-    now: SignalProps
-    next: SignalProps
-    prev: SignalProps
+    current: number,
+    nowTitle: string,
+    nowLink: string,
+    nowAlias: string,
+    nextTitle?: string,
+    nextAlias?: string,
+    prevTitle?: string,
+    prevAlias?: string,
+    setIndex: (t: number) => void;
+    giveIndex: (t: number, setIndex: (t: number) => void, current: number)=>void;
+    isFliped: boolean,
 }
 
-function Signal({now, next, prev}: Props) {
+function Signal({current, nowTitle, nowLink, nowAlias, nextTitle, nextAlias, prevTitle, prevAlias, setIndex, giveIndex, isFliped}: Props) {
+    function flipback(){
+        createTimeline({defaults: {duration:1500}})
+        .add('.signalOff',{
+            opacity: 0.8,
+            duration: 500,
+        },0)
+        .add('.signalOff',{
+            opacity: 1,
+            duration: 600,
+        },500)
+        .add('.signalSign',{
+            rotateX: 180,
+            duration: 1000,
+        },500)
+    }
+    function flipforward(){
+        createTimeline({defaults: {duration:1500}})
+        .add('.signalOff',{
+            opacity: 0.8,
+            duration: 500,
+        },500)
+        .add('.signalSign',{
+            rotateX: 0,
+            duration: 1000,
+        },0)
+        .add('.signalOff',{
+            opacity: 0,
+            duration: 500,
+        },1000)
+    }
+    function plusIndex(){
+        giveIndex(current + 1, setIndex, current)
+    }
+    function minusIndex(){
+        giveIndex(current - 1, setIndex, current)
+    }
+
+    useEffect(() => {
+        if(isFliped){
+            flipback()
+        }else{
+            flipforward()
+        }
+
+    }, [isFliped]);
     return (
-        <div className="sign">
-                <div className="title">
+        <div className="signalSign">
+                <div className="signalTitle">
 
-                    <a className="stationtitle" href={now.link}>{now.title}</a>
+                    <a className="signalStationTitle" href={nowLink}>{nowTitle}</a>
                 </div>
-                <div className="direction">
-                    <a className="next nav" href={next.link}>{next.title}</a>
-                    <a className="prev nav" href={prev.link}>{prev.title}</a>
+                <div className="signalDirection">
+                    <a className="signalNext signalNav" onClick={plusIndex} >{nextTitle}</a>
+                    <a className="signalPrev signalNav" onClick={minusIndex}>{prevTitle}</a>
                 </div>
-                <div className="alias">
-                    <p className="titlealia alia">{now.alias}</p>
-                    <p className="nextalia alia">{next.alias}</p>
-                    <p className="prevalia alia">{prev.alias}</p>
-
+                <div className="signalAlias">
+                    <p className="signalTitleAlia signalAlia">{nowAlias}</p>
+                    <p className="signalNextAlia signalAlia">{nextAlias}</p>
+                    <p className="signalPrevAlia signalAlia">{prevAlias}</p>
                 </div>
-
+                <div className="signalOff"></div>
             </div>
     );
 }

@@ -1,34 +1,43 @@
-.stations{
-    position: fixed;
+.stationStations{
+    --bubble-light: 0.5441 0.2046 16.0309;
+    --bubble-dark: 0.8121 0.0617 129.3393;
+    --black: 0.1691 0.0101 234.4401;
+    --background: 247, 217, 76;
+
+    position: relative;
     display: flex;
-    flex-direction: row;
-    top: 0;
+    flex-direction: column;
+    width: 25vw;
+    font-family: "Noto Sans SC", sans-serif;
+    background-color: rgb(var(--background));
+
 }
-.station{
-    writing-mode: vertical-lr;
+.stationStation{
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0;
 }
 
-.bubble{
+.stationBubble{
+    display: inline-block;
     position: relative;
     border: 1px solid oklch(var(--black));
+    background-color: white;
     border-radius: 999px;
-    left: 0.4em;
     width: 10px;
     height: 10px;
-    margin: 1em;
     transition: 0.2s;
 }
 
-#active {
+#stationActive {
     box-shadow: 
     inset 1px 3px 5px 1px oklch(var(--bubble-light)),
     0px 0px 10px 5px oklch(var(--bubble-light) / 0.3);
 
-
-
 }
 
-#inactive {
+#stationInactive {
     box-shadow: inset 1px 3px 5px 1px oklch(var(--bubble-dark)),
                       0px 0px 10px 5px oklch(var(--bubble-dark) / 0.3);
 

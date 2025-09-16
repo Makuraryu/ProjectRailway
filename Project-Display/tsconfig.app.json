@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "desserted/Project.tsx", "desserted/Projects.tsx", "desserted/Railway.tsx"]
 }

@@ -1,0 +1,102 @@
+.frameFrame{
+    --border: 204, 208, 218;
+    --theme: 0.7493 0.1369 135.4864;
+    --themedec: 0.8399 0.0661 156.3551;
+    --dark: 0.2622 0.0581 254.7864;
+    --doorshadow: 0.1;
+    --windowblur: 5px;
+    position: fixed;
+    width: 50vw;
+    left: 25vw;
+    height: 100vh;
+    top: 0;
+
+}
+
+.frameBorder{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 20px);
+    left: -20px;
+    top:0px;
+    border-left: 20px solid rgb(var(--border));
+    border-right: 20px solid rgb(var(--border));
+    border-top: 10px solid rgb(var(--border));
+    border-bottom: 10px solid rgb(var(--border));
+    border-radius: 30px;
+    box-shadow:
+        inset 0 0 10px 10px oklch(var(--dark) / var(--doorshadow)),
+        0 0 10px 10px oklch(var(--dark) / 0.4);
+}
+.frameDoors{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+}
+.frameDoor{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+
+}
+.frameDoorPanel{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, oklch(var(--theme)),oklch(var(--themedec)), oklch(var(--theme)));
+    clip-path: polygon(
+        0 0,
+        25% 0,
+        25% 60%,
+        75% 60%,
+        75% 20%,
+        25% 20%,
+        25% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+.frameLeft{
+    left: 0;
+
+}
+.frameRight{
+    right: 0;
+}
+
+.framePanelLeft{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+.framePanelRight{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.frameDoorPanel::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: oklch(var(--dark) / 0.3);
+}
+.framePanelLeft::after{
+    right: 0;
+}
+.framePanelRight::after{
+    left: 0;
+}
+
+.frameWindow{
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    top: 20%;
+    background-color: oklch(var(--dark) / 0.8);
+    backdrop-filter: blur(var(--windowblur));
+    box-shadow: inset 0 0 10px 10px oklch(var(--dark) / 0.6);
+}
