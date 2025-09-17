@@ -15,15 +15,15 @@ function Station({index, projects, setIndex, giveIndex}: StationProps){
     return(
         <>
             <div className="stationStations">
-                {projects.map((project, i) => (
-                    <div key={i} onClick={() => {giveIndex(i, setIndex, index)}}>
-                        <div id={i === index ? "stationActive" : "stationInactive"} className="stationBubble"></div>    
-                        <span className="stationStation">
-                            {project}
-                        </span>
-                    </div>
+                    {projects.map((project, i) => (
+                        <div className="stationSlot" key={i} onClick={() => {giveIndex(i, setIndex, index)}}>
+                            <div id={i === index ? "stationActive" : "stationInactive"} className="stationBubble"></div>    
+                            <span className="stationStation">
+                                {project}
+                            </span>
+                        </div>
 
-                ))}
+                    ))}
             </div>
         </>
     )

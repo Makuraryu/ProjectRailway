@@ -1,21 +1,18 @@
 import './App.css'
 import projects from './assets/projects.json'
 import { useEffect,useState } from 'react';
+import Lenis from 'lenis';
 import Station from './components/Station'
 import Signal from './components/Signal'
 import Footer from './components/Footer'
 import Frame from './components/Frame'
+import Content from './components/Content';
+import Cover from './components/Cover';
 function App() {
   const [index, setIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isFliped, setIsFliped] = useState(false);
-
-  function plusIndex(){
-    setIndex((index + 1) % projects.length)
-  }
-  function minusIndex(){
-    setIndex((index + projects.length - 1) % projects.length)
-  }
+  const [isCover, setIsCover] = useState(true);
 
   async function giveIndex(target: number, setIndex: (val: number) => void, current: number) {
     setIsOpen(false);
@@ -26,21 +23,45 @@ function App() {
     while (i !== target) {
         i += i < target ? 1 : -1;
         setIndex(i);
-        await new Promise(res => setTimeout(res, 400)); // 每步延迟 100ms
+        await new Promise(res => setTimeout(res, 400));
     }
     setIsFliped(false);
     setIsOpen(true);
 
   }
+  async function Initail(){
+    await new Promise(res => setTimeout(res, 1000));
+    setIsCover(false);
+    await new Promise(res => setTimeout(res, 1500));
+    setIsOpen(true);
+  }
 
 
   useEffect(() => {
-    setIsOpen(true);
+    Initail();
+
+    // Initialize Lenis
+    const lenis = new Lenis();
+
+    // Use requestAnimationFrame to continuously update the scroll
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   }, []);
 
   return (
     <>
-      
+      <Content 
+        name={projects[index].name}
+        alias={projects[index].alias}
+        link={projects[index].link}
+        stack={projects[index].stack}
+        tags={projects[index].tags}
+        description={projects[index].description}
+      />
       <div className="header">
         <Signal 
           current={index}
@@ -62,7 +83,7 @@ function App() {
       
       <Footer />
       <Frame isOpen={isOpen}  />
-
+      <Cover isCovered={isCover}/>
       
 
     </>

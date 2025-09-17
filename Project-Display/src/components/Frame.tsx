@@ -15,12 +15,16 @@ function Frame({isOpen}: FrameProps){
         },0)
         .add('.frameLeft',{
             x: '-100%',
-            duration:1000,
+            duration:900,
         },500)
-       .add('.frameRight',{
+        .add('.frameRight',{
             x: '100%',
-            duration:1000,
+            duration:900,
         },500)
+        .add('.frameFrame',{
+            '--doorshadow': 0.1,
+            duration: 100,
+        },1400)
 
     }
     function doorClose(){
@@ -36,7 +40,7 @@ function Frame({isOpen}: FrameProps){
         },0)
         .add('.frameFrame',{
             '--doorshadow': 0.1,
-            '--windowblur': 5 + 'px',
+            '--windowblur': 8 + 'px',
             duration: 200,
         },800)
     }

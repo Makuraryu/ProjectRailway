@@ -1,29 +1,42 @@
 .stationStations{
     --bubble-light: 0.5441 0.2046 16.0309;
-    --bubble-dark: 0.8121 0.0617 129.3393;
+    --bubble-dark: 0.6596 0.1227 176.5904;
     --black: 0.1691 0.0101 234.4401;
-    --background: 247, 217, 76;
-
     position: relative;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     width: 25vw;
+    font-size: 20px;
     font-family: "Noto Sans SC", sans-serif;
-    background-color: rgb(var(--background));
+    font-weight: 300;
+    margin-top: 15px;
+    overflow: scroll;
+    scrollbar-width: none;
 
 }
+
+.stationSlot{
+    position: relative;
+    margin-bottom: 10px;
+}
+
 .stationStation{
     position: relative;
     left: 0;
     top: 0;
     margin: 0;
+
+
 }
 
 .stationBubble{
+    margin-left: 30px;
+    margin-right: 15px;
+
     display: inline-block;
     position: relative;
     border: 1px solid oklch(var(--black));
-    background-color: white;
     border-radius: 999px;
     width: 10px;
     height: 10px;

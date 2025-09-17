@@ -9,6 +9,8 @@
     width: 50vw;
     left: 25vw;
     height: 100vh;
+    pointer-events: none;
+
     top: 0;
 
 }

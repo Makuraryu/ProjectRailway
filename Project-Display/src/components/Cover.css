@@ -1,0 +1,15 @@
+.coverCover{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(33, 30, 85, 0.8);
+    backdrop-filter: blur(15px);
+    pointer-events: none;
+}
+.coverIcon{
+    top: 30vh;
+    position: relative;
+    font-size: 48px;
+    text-align: center;
+    
+}

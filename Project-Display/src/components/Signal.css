@@ -5,7 +5,8 @@
     --dark:0.2188 0.0254 280.6649;
     --width: calc(25vw - 20px);
     --theme: 0.7493 0.1369 135.4864;
-    --themedec: 0.7349 0.0605 146.3925;
+    --themedec: 0.6596 0.1227 176.5904;
+    flex: 0 0 auto;
     position: relative;
     width: var(--width);
     background: radial-gradient(oklch(var(--lighter)),oklch(var(--light)));
@@ -15,6 +16,7 @@
     border-right: calc(var(--width) / 80) solid oklch(var(--dark));
     box-shadow: inset 0 0 10px 10px oklch(var(--dark) / 0.1);
     font-family: "Noto Sans SC", sans-serif;
+    transform-style: preserve-3d;
 }
 
 a{

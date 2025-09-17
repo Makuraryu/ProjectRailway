@@ -1,0 +1,21 @@
+.contentContent{
+    position: absolute;
+    width: 50vw;
+    left: 25vw;
+    color: rgb(254, 223, 225);
+    min-height: 100vh;
+    font-family: "Noto Sans SC", sans-serif;
+}
+.contentSlot{
+    margin: 50px;
+}
+
+.contentName{
+    font-size: 56px;
+    font-weight: 900;
+}
+.contentAlias{
+    font-size: 42px;
+    font-weight: 200;
+
+}
