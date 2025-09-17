@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: rgba(33, 30, 85, 0.8);
+    background-color: rgba(251, 150, 110, 0.8);
     backdrop-filter: blur(15px);
     pointer-events: none;
 }

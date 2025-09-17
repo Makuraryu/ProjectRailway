@@ -8,7 +8,7 @@ function Cover({isCovered}: Props) {
     useEffect(() => {
         if(!isCovered) {
                 animate(".coverCover",{
-                    "background-color": "rgba(33, 30, 85, 0)",
+                    "background-color": "rgba(251, 150, 110, 0)",
                     "backdrop-filter": "blur(0px)",
                     duration: 800
                 })
@@ -22,7 +22,7 @@ function Cover({isCovered}: Props) {
         }else{
             document.body.appendChild(document.querySelector(".coverCover")!)
             animate(".coverCover",{
-                "background-color": "rgba(33, 30, 85, 0.8)",
+                "background-color": "rgba(251, 150, 110, 0.8)",
                 "backdrop-filter": "blur(15px)",
                 duration: 800
             })
