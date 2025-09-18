@@ -1,7 +1,7 @@
 .stationStations{
-    --bubble-light: 0.5441 0.2046 16.0309;
-    --bubble-dark: 0.6596 0.1227 176.5904;
-    --black: 0.1691 0.0101 234.4401;
+    --bubble-light: 203, 27, 69;
+    --bubble-dark: 0, 170, 144;
+    --black: 11, 16, 19;
     position: relative;
     display: flex;
     flex: 1 1 auto;
@@ -36,7 +36,7 @@
 
     display: inline-block;
     position: relative;
-    border: 1px solid oklch(var(--black));
+    border: 1px solid rgb(var(--black));
     border-radius: 999px;
     width: 10px;
     height: 10px;
@@ -45,13 +45,13 @@
 
 #stationActive {
     box-shadow: 
-    inset 1px 3px 5px 1px oklch(var(--bubble-light)),
-    0px 0px 10px 5px oklch(var(--bubble-light) / 0.3);
+    inset 1px 3px 5px 1px rgb(var(--bubble-light)),
+    0px 0px 10px 5px rgba(var(--bubble-light), 0.3);
 
 }
 
 #stationInactive {
-    box-shadow: inset 1px 3px 5px 1px oklch(var(--bubble-dark)),
-                      0px 0px 10px 5px oklch(var(--bubble-dark) / 0.3);
+    box-shadow: inset 1px 3px 5px 1px rgb(var(--bubble-dark)),
+                      0px 0px 10px 5px rgba(var(--bubble-dark), 0.3);
 
 }

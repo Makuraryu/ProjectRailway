@@ -1,8 +1,8 @@
 .frameFrame{
     --border: 204, 208, 218;
-    --theme: 0.7493 0.1369 135.4864;
-    --themedec: 0.8399 0.0661 156.3551;
-    --dark: 0.2622 0.0581 254.7864;
+    --theme: 134, 193, 102;
+    --themedec: 168, 216, 185;
+    --dark: 15, 37, 64;
     --doorshadow: 0.1;
     --windowblur: 5px;
     position: fixed;
@@ -27,8 +27,8 @@
     border-bottom: 10px solid rgb(var(--border));
     border-radius: 30px;
     box-shadow:
-        inset 0 0 10px 10px oklch(var(--dark) / var(--doorshadow)),
-        0 0 10px 10px oklch(var(--dark) / 0.4);
+        inset 0 0 10px 10px rgba(var(--dark), var(--doorshadow)),
+        0 0 10px 10px rgba(var(--dark), 0.4);
 }
 .frameDoors{
     position: absolute;
@@ -46,7 +46,7 @@
 .frameDoorPanel{
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, oklch(var(--theme)),oklch(var(--themedec)), oklch(var(--theme)));
+    background: linear-gradient(to bottom, rgb(var(--theme)),rgb(var(--themedec)), rgb(var(--theme)));
     clip-path: polygon(
         0 0,
         25% 0,
@@ -83,7 +83,7 @@
     position: absolute;
     width: 5px;
     height: 100%;
-    background-color: oklch(var(--dark) / 0.3);
+    background-color: rgba(var(--dark), 0.3);
 }
 .framePanelLeft::after{
     right: 0;
@@ -98,7 +98,7 @@
     height: 40%;
     left: 25%;
     top: 20%;
-    background-color: oklch(var(--dark) / 0.8);
+    background-color: rgba(var(--dark), 0.8);
     backdrop-filter: blur(var(--windowblur));
-    box-shadow: inset 0 0 10px 10px oklch(var(--dark) / 0.6);
+    box-shadow: inset 0 0 10px 10px rgba(var(--dark), 0.6);
 }

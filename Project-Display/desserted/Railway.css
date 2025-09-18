@@ -41,7 +41,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background: linear-gradient(to bottom, oklch(var(--medal1)),oklch(var(--medal2)) var(--gradtop), oklch(var(--medal3)) var(--gradtop),oklch(var(--medal3)) var(--gradbot),oklch(var(--medal2)) var(--gradbot),oklch(var(--medal1)));
+    background: linear-gradient(to bottom, rgb(var(--medal1)),rgb(var(--medal2)) var(--gradtop), rgb(var(--medal3)) var(--gradtop),rgb(var(--medal3)) var(--gradbot),rgb(var(--medal2)) var(--gradbot),rgb(var(--medal1)));
 }
 .wall::before{
     content: '';
@@ -49,7 +49,7 @@
     left: 0;
     width: 100%;
     height: var(--pinstripe);
-    background-color: oklch(var(--theme));
+    background-color: rgb(var(--theme));
     top: calc(var(--gradbot) + 5%);
 
 }
@@ -75,12 +75,12 @@
     height: calc(var(--gradbot) - var(--gradtop) - (2 * var(--windowpad) ));
     left: calc(((100% - var(--window-width)) / 2) - var(--framesize));
     top: calc((var(--gradtop) + var(--windowpad)) - var(--framesize));
-    background-color: oklch(var(--dark) / 0.8);
-    border: var(--framesize) solid oklch(var(--frame));
+    background-color: rgba(var(--dark), 0.8);
+    border: var(--framesize) solid rgb(var(--frame));
     border-radius: 10px;
     box-shadow: 
-    inset 0 0 10px 10px oklch(var(--dark) / 0.1),
-    0 0 5px 5px oklch(var(--dark) / 0.1);
+    inset 0 0 10px 10px rgba(var(--dark), 0.1),
+    0 0 5px 5px rgba(var(--dark), 0.1);
 
 }
 
@@ -98,12 +98,12 @@
     height: var(--doorheight);
     left: calc(((100% - var(--doorwidth)) / 2) - var(--framesize));
     top: calc(((100% - var(--doorheight)) / 2) - var(--framesize));
-    border: var(--framesize) solid oklch(var(--frame));
+    border: var(--framesize) solid rgb(var(--frame));
     border-radius: 10px;
     transition: box-shadow 0.2s;
     box-shadow: 
-    inset 0 0 10px 10px oklch(var(--dark) / var(--doorinsha)),
-    0 0 5px 5px oklch(var(--dark) / 0.1);
+    inset 0 0 10px 10px rgba(var(--dark), var(--doorinsha)),
+    0 0 5px 5px rgba(var(--dark), 0.1);
 }
 
 .doorwrapper{
@@ -151,7 +151,7 @@
 .doa{
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, oklch(var(--theme)),oklch(var(--themedec)), oklch(var(--theme)));
+    background: linear-gradient(to bottom, rgb(var(--theme)),rgb(var(--themedec)), rgb(var(--theme)));
     clip-path: polygon(
         0 0,
         calc((100% - var(--doorwindowwidth)) / 2) 0,
@@ -168,14 +168,14 @@
 }
 .doaglass{
     position: absolute;
-    background-color: oklch(var(--dark) / 0.8);
+    background-color: rgba(var(--dark), 0.8);
     width: var(--doorwindowwidth);
     height: var(--doorwindowheight);
     left: calc((100% - var(--doorwindowwidth)) / 2 - var(--framesize));
     top: calc(var(--doorwindowtop) - var(--framesize));
-    border: var(--framesize) solid oklch(var(--frame));
+    border: var(--framesize) solid rgb(var(--frame));
     border-radius: 5px;
     box-shadow: 
-    inset 0 0 5px 5px oklch(var(--dark) / 0.1),
-    0 0 5px 5px oklch(var(--dark) / 0.1);
+    inset 0 0 5px 5px rgba(var(--dark), 0.1),
+    0 0 5px 5px rgba(var(--dark), 0.1);
 }

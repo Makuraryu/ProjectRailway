@@ -1,20 +1,20 @@
 
 .signalSign{
-    --lighter: 0.9578 0.0057 264.4935;
-    --light: 0.8575 0.0145 268.4782;
-    --dark:0.2188 0.0254 280.6649;
+    --lighter: 239, 241, 245;
+    --light: 204, 208, 218;
+    --dark:24, 25, 38;
     --width: calc(25vw - 20px);
-    --theme: 0.7493 0.1369 135.4864;
-    --themedec: 0.6596 0.1227 176.5904;
+    --theme: 134, 193, 102;
+    --themedec: 0, 170, 144;
     flex: 0 0 auto;
     position: relative;
     width: var(--width);
-    background: radial-gradient(oklch(var(--lighter)),oklch(var(--light)));
-    border-top: calc(var(--width) / 16) solid oklch(var(--dark));
-    border-bottom: calc(var(--width) / 40) solid oklch(var(--dark));
-    border-left: calc(var(--width) / 80) solid oklch(var(--dark));
-    border-right: calc(var(--width) / 80) solid oklch(var(--dark));
-    box-shadow: inset 0 0 10px 10px oklch(var(--dark) / 0.1);
+    background: radial-gradient(rgb(var(--lighter)),rgb(var(--light)));
+    border-top: calc(var(--width) / 16) solid rgb(var(--dark));
+    border-bottom: calc(var(--width) / 40) solid rgb(var(--dark));
+    border-left: calc(var(--width) / 80) solid rgb(var(--dark));
+    border-right: calc(var(--width) / 80) solid rgb(var(--dark));
+    box-shadow: inset 0 0 10px 10px rgba(var(--dark), 0.1);
     font-family: "Noto Sans SC", sans-serif;
     transform-style: preserve-3d;
 }
@@ -34,7 +34,7 @@ a{
     width: 100%;
     min-width: 0; 
     font-size: calc(var(--width) / 20);
-    color: oklch(var(--dark));
+    color: rgb(var(--dark));
     bottom: 0;
     text-align: center;
     margin: 0 auto;
@@ -51,7 +51,7 @@ a{
 .signalDirection{
     position: relative;
     height: calc(var(--width) / 16);
-    background-color: oklch(var(--theme));
+    background-color: rgb(var(--theme));
     clip-path: polygon(
         calc(var(--width) / 8) 0,
         100% 0,
@@ -67,7 +67,7 @@ a{
     left: calc(var(--width) / 32 * 15);
     width: calc(var(--width) / 16);
     height: calc(var(--width) / 16);
-    background-color: oklch(var(--themedec));
+    background-color: rgb(var(--themedec));
     
 }
 .signalNav{
@@ -79,7 +79,7 @@ a{
     text-indent: 0.3em;
     margin: 0;
     font-weight: 700;
-    color: oklch(var(--lighter));
+    color: rgb(var(--lighter));
     width: 30%;
     letter-spacing: 0;
     overflow: hidden;
@@ -101,7 +101,7 @@ a{
 
 }
 .signalAlia{
-    color: oklch(var(--dark));
+    color: rgb(var(--dark));
     position: absolute;
     font-size: calc(var(--width) / 36);
     margin: 0;
@@ -133,7 +133,7 @@ a{
     position: absolute;
     width: 100%;
     height:100%;
-    background-color: oklch(var(--dark));
+    background-color: rgb(var(--dark));
     opacity: 0.8;
     top: 0;
     pointer-events: none;
