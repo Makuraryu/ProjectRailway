@@ -31,7 +31,6 @@ function Cover({isCovered}: Props) {
     },[isCovered])
     return (
         <div className='coverCover'>
-            <p className="coverIcon">🚇</p>
         </div>
     )
 }

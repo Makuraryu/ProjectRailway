@@ -6,10 +6,3 @@
     backdrop-filter: blur(15px);
     pointer-events: none;
 }
-.coverIcon{
-    top: 30vh;
-    position: relative;
-    font-size: 48px;
-    text-align: center;
-    
-}
