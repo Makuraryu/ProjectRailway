@@ -90,9 +90,12 @@ a{
 }
 .signalNext{
     left: calc(var(--width) / 6);
+    cursor: pointer;
 }
 .signalPrev{
     right: calc(var(--width) / 20);
+    cursor: pointer;
+
 }
 .signalAlias{
     height: calc(var(--width) / 16);

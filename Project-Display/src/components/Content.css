@@ -2,7 +2,7 @@
     position: absolute;
     width: 50vw;
     left: 25vw;
-    color: rgb(254, 223, 225);
+    color: rgb(33, 30, 85);
     min-height: 100vh;
     font-family: "Noto Sans SC", sans-serif;
 }
@@ -10,12 +10,130 @@
     margin: 50px;
 }
 
+.contentInformation{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.contentLine{
+    background-color: rgba(33, 30, 85, 0.3);
+    border-radius: 1px;
+    height: 2px;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contentBasic{
+    flex: 1 1 80%;
+
+}
 .contentName{
     font-size: 56px;
     font-weight: 900;
+    text-shadow: 10px 10px 20px rgba(33, 30, 85, 0.3);
+
 }
 .contentAlias{
+    
     font-size: 42px;
     font-weight: 200;
 
+
 }
+
+.contentTags{
+    flex: 0 0 20%;
+    
+}
+
+.contentTagsTitle{
+    color: rgba(33, 30, 85, 0.7);
+    font-size: 18px;
+    font-weight: 200;
+    margin: 5px;
+
+}
+
+.contentTag{
+    font-weight: 400;
+    font-size: 15px;
+    margin: 5px;
+    color: rgba(33, 30, 85, 0.6);
+
+
+}
+.contentLinks{
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    gap: 5px;
+
+}
+.contentLink{
+    text-decoration: none;
+    position: relative;
+    color: rgb(33, 30, 85);
+    text-shadow: 0 0 20px rgba(33, 30, 85, 0.2);
+
+    background-color: rgb(168, 216, 185);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    transition: all 0.5s;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.contentLink:hover{
+    background-color: rgb(33, 30, 85);
+    color: rgb(168, 216, 185);
+    text-shadow: 0 0 20px rgba(168, 216, 185, 0.8);
+    box-shadow: 0 5px 5px 5px rgba(33, 30, 85, 0.2);
+    transform: translateY(-5px);
+
+    
+}
+
+.contentDescription{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+.contentStacks{
+    display: flex;
+}
+.contentStack{
+    font-weight: 400;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.contentStacksTitle{
+    font-size: 18px;
+    font-weight: 200;
+    margin: 5px;
+}
+
+
+
+.contentImg{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    box-shadow: 10px 5px 10px 5px rgba(33, 30, 85, 0.1);
+    border-radius: 15px;
+
+}
+.contentImgDesc{
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+

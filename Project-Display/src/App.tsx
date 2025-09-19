@@ -1,7 +1,6 @@
 import './App.css'
 import projects from './assets/projects.json'
 import { useEffect,useState } from 'react';
-import Lenis from 'lenis';
 import Station from './components/Station'
 import Signal from './components/Signal'
 import Footer from './components/Footer'
@@ -40,16 +39,6 @@ function App() {
   useEffect(() => {
     Initail();
 
-    // Initialize Lenis
-    const lenis = new Lenis();
-
-    // Use requestAnimationFrame to continuously update the scroll
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
   }, []);
 
   return (
@@ -58,8 +47,10 @@ function App() {
         name={projects[index].name}
         alias={projects[index].alias}
         link={projects[index].link}
+        links = {projects[index].links as Record<string, string>}
         stack={projects[index].stack}
         tags={projects[index].tags}
+        imgs={projects[index].imgs as Record<string, string>}
         description={projects[index].description}
       />
       <div className="header">

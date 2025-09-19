@@ -12,10 +12,6 @@ function Cover({isCovered}: Props) {
                     "backdrop-filter": "blur(0px)",
                     duration: 800
                 })
-                animate(".coverIcon",{
-                    opacity: 0,
-                    duration: 800
-                })
                 setTimeout(() => {
                     document.querySelector(".coverCover")?.remove()
                 }, 800)
@@ -30,8 +26,7 @@ function Cover({isCovered}: Props) {
         
     },[isCovered])
     return (
-        <div className='coverCover'>
-        </div>
+        <div className='coverCover'></div>
     )
 }
 export default Cover

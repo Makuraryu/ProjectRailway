@@ -58,3 +58,28 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.footerDescription{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    width: 80%;
+    font-weight: 200;
+}
+
+.footerDescriptionEng{
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    width: 80%;
+    font-weight: 200;
+}
+
+.footerMail{
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    width: 80%;
+    color: rgb(var(--black));
+    font-weight: 200;
+}

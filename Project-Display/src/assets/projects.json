@@ -3,40 +3,75 @@
         "name": "枕流阁",
         "alias": "Blog",
         "link": "https://Makuraryu.vercel.app",
+        "links": {
+            "Visit":"https://Makuraryu.vercel.app"
+        },
         "stack": ["Astro","CSS","Javascript"],
         "tags":["Frontend"],
+        "imgs":{
+            "采用大面积的绿色作为主色调，意在营造一种自然、平静而富有生机的视觉感受。页面的核心区域以衬线体日语“实直苦闘”作为视觉中心，传递出我的人生观。页面的顶部设计了简洁而精致的导航模块，与整体的柔和氛围相得益彰。底部内容则默认隐藏，让用户通过滚动自行阅览。使整个界面在视觉上既有冲击力，又不失和谐与平衡。":"https://www.dropbox.com/scl/fi/ciqzrespfgo28sk0ci0br/2025-09-20-02.06.24.png?rlkey=6ol5773t7r1sa75iwrut14riv&st=vklpcdld&raw=1",
+            "夜间模式设计考虑了色彩的柔和过渡与用户的视觉舒适度。选择低饱和度的深紫色作为背景色，既能有效降低屏幕亮度，减少夜间使用时的视觉疲劳，又保留了一定的色彩温度，使整个页面显得更加温暖和有质感。大标题和正文的文字颜色则调整为淡雅的白色，确保了在深色背景下的高对比度，使得内容清晰易读。同时，顶部的导航栏和底部的内容模块在夜间模式下也进行了相应的色彩优化，整体呈现出一种沉稳而静谧的氛围。":"https://www.dropbox.com/scl/fi/h6d8rid18ocuunkwoolyt/2025-09-20-02.07.03.png?rlkey=t3rrifykf9wag8xsupjsdgvi8&st=jxm6n7yq&raw=1"
+            
+        },
         "description": "我的个人博客，基于 Astro 框架，以简洁的设计和丝滑流畅的用户体验为核心，并且支持夜间主题等多种隐藏功能。"
     },
     {
-        "name": "Colouir",
-        "alias": "Color",
+        "name": "Colouir 色盘",
+        "alias": "Color Picker",
         "link": "https://colouir.vercel.app",
+        "links": {
+            "Visit":"https://colouir.vercel.app",
+            "GitHub":"https://github.com/Makuraryu/Colouir"
+        },
         "stack": ["Vue.js","CSS","Javascript"],
         "tags":["Frontend","Webapp"],
+        "imgs":{
+            "当用户在圆形区域内选择任一颜色时，整个页面的背景色会即时动态地发生变化，以所选颜色为主色调，这种沉浸式的交互体验不仅直观展示了色彩效果，也极大增强了设计的趣味性和用户参与感":"https://www.dropbox.com/scl/fi/uux5jxw95nn87pz3fpfnr/2025-09-20-02.16.55.png?rlkey=qk2qjnq31ctq4asozf9wg8ur1&st=86chbmua&raw=1"
+        },
         "description": "色彩可视化工具，提供色盘浏览和多种色彩编码格式的选择，支持历史保存等功能。基于 Vue.js 开发。"
     },
     {
         "name": "枕流起始页",
         "alias": "Homepage",
         "link": "https://makuraryu.github.io/MR-starter-main/index.html",
+        "links": {
+            "Visit":"https://makuraryu.github.io/MR-starter-main/index.html"
+        },
         "stack": ["HTML","CSS","Javascript"],
         "tags":["Frontend","Webapp"],
+        "imgs":{
+            "在页面的中心，用简洁而醒目的“Search”字样作为主视觉，旁边配以随机的手势表情符号，以一种轻松幽默的方式邀请用户进行搜索。下方为随机的名言，为浏览器起始页赋予了更丰富的内容。":"https://www.dropbox.com/scl/fi/jjgmkiydh0wu80ej8r4ou/2025-09-20-02.21.57.png?rlkey=29za2g7z402aa8ne4p1qeo4j9&st=o0pjj2rp&raw=1",
+            "当用户点击搜索时，下方的名言会被一列快捷导航替换，便于进行快速的页面跳转":"https://www.dropbox.com/scl/fi/rp3pgy0mdmv0dy1eqh662/2025-09-20-02.22.14.png?rlkey=klb5dolh79rk6mgv28nxooxex&st=sgfdj4qz&raw=1"
+
+        },
         "description": "一个极简风格的搜索起始页，设计简洁美观。使用前端技术实现丝滑流畅的用户交互体验。"
     },
     {
-      "name": "中文简繁体转换器",
-      "alias": "Converter",
-      "link": "https://github.com/Makuraryu/Chinese-Converter",
-      "stack": ["Python","Flask","JavaScript"],
-      "tags":["Backend","Frontend","Large Language Model"],
-      "description": "在校期间的实习项目，基于大语言模型开发的中文简繁体转换器，支持文本、图片和 PDF 的转换。并开发了 API 接口和完整地前端页面。"
+        "name": "中文简繁体转换器",
+        "alias": "Converter",
+        "link": "https://github.com/Makuraryu/Chinese-Converter",
+        "links": {
+            "GitHub":"https://github.com/Makuraryu/Chinese-Converter"
+        },
+        "stack": ["Python","Flask","JavaScript"],
+        "tags":["Backend","Frontend","Large Language Model"],
+        "imgs":{},
+        "description": "在校期间的实习项目，基于大语言模型开发的中文简繁体转换器，支持文本、图片和 PDF 的转换。并开发了 API 接口和完整地前端页面。"
     },
     {
         "name":"开往《列车》重定向页面",
         "alias":"Travelling",
         "link":"https://github.com/Travellings-link/Travellings",
+        "links": {
+            "Visit":"https://www.travellings.cn/train.html",
+            "Document":"https://www.travellings.cn/docs/pages.html",
+            "GitHub":"https://github.com/Travellings-link/Travellings"
+        },
         "stack":["HTML","CSS","JavaScript"],
         "tags":["Frontend","Open Source"],
-        "description":"一个简单的重定向页面，用户访问后自动跳转到指定的列车信息页面。"
+        "imgs":{
+            "模拟列车开动时向窗外眺望，电线杆不断掠过的影像。整个页面旨在用一种独特的方式打破传统加载页面的单调，通过富有情感和故事性的设计，让用户在等待的几秒钟内也能享受到愉悦的视觉与文案体验。":"https://www.dropbox.com/scl/fi/zy9h9bg4424puxicv3t4j/train-page.webp?rlkey=u2viosdjemzgq5qfjq1wx7m9u&st=ve7txo61&raw=1"
+        },
+        "description":"为开源项目《开往》制作的一个跳转页面。以列车为主题。"
     }
 ]
