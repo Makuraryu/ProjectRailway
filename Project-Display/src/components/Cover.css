@@ -6,3 +6,8 @@
     backdrop-filter: blur(15px);
     pointer-events: none;
 }
+.coverCover > p{
+    position: relative;
+    text-align: center;
+    top: 40vh;
+}

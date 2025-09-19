@@ -2,9 +2,10 @@ import { useEffect } from 'react'
 import './Cover.css'
 import { animate } from 'animejs'
 type Props = {
-    isCovered: boolean
+    isCovered: boolean,
+    content: string
 }
-function Cover({isCovered}: Props) {
+function Cover({isCovered, content}: Props) {
     useEffect(() => {
         if(!isCovered) {
                 animate(".coverCover",{
@@ -26,7 +27,9 @@ function Cover({isCovered}: Props) {
         
     },[isCovered])
     return (
-        <div className='coverCover'></div>
+        <div className='coverCover'>
+            <p>{ content }</p>
+        </div>
     )
 }
 export default Cover

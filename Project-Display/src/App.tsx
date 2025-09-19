@@ -74,7 +74,7 @@ function App() {
       
       <Footer />
       <Frame isOpen={isOpen}  />
-      <Cover isCovered={isCover}/>
+      <Cover isCovered={isCover} content=''/>
       
 
     </>
