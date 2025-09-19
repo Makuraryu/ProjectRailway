@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { onScroll } from 'animejs';
 import './Project.css'
 
 type Project = {
@@ -17,7 +16,7 @@ type In = {
     minusIndex: () => void;
 }
 
-function project({proj: {name, alias, link, stack, tags, description}, plusIndex, minusIndex}: In){
+function project({proj: {name, alias, link, stack, tags, description}}: In){
     useEffect(() => {
 
         

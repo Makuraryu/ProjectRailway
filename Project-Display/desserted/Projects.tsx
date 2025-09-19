@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import { createTimeline, onScroll } from 'animejs';
+import { createTimeline } from 'animejs';
 import './Projects.css'
 import Project from './Project';
 import Railway from './Railway';
