@@ -12,6 +12,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isFliped, setIsFliped] = useState(false);
   const [isCover, setIsCover] = useState(true);
+  const [coverContent, setCoverContent] = useState('');
 
   async function giveIndex(target: number, setIndex: (val: number) => void, current: number) {
     setIsOpen(false);
@@ -29,16 +30,36 @@ function App() {
 
   }
   async function Initail(){
-    await new Promise(res => setTimeout(res, 1000));
-    setIsCover(false);
-    await new Promise(res => setTimeout(res, 1500));
-    setIsOpen(true);
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    if (h < w) {
+      await new Promise(res => setTimeout(res, 1000));
+      await new Promise(res => setTimeout(res, 1500));
+      setIsOpen(true);
+    }
   }
 
 
   useEffect(() => {
     Initail();
 
+  }, []);
+
+  useEffect(() => {
+    const check = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const show = h > w;
+      setIsCover(show);
+      setCoverContent(show ? 'Please view this page in landscape orientation' : '');
+    };
+    check();
+    window.addEventListener('resize', check);
+    window.addEventListener('orientationchange', check);
+    return () => {
+      window.removeEventListener('resize', check);
+      window.removeEventListener('orientationchange', check);
+    };
   }, []);
 
   return (
@@ -74,7 +95,7 @@ function App() {
       
       <Footer />
       <Frame isOpen={isOpen}  />
-      <Cover isCovered={isCover} content=''/>
+      <Cover isCovered={isCover} content={coverContent}/>
       
 
     </>

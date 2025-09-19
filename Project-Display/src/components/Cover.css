@@ -7,7 +7,10 @@
     pointer-events: none;
 }
 .coverCover > p{
+    font-family: "Noto Sans SC", sans-serif;
     position: relative;
     text-align: center;
     top: 40vh;
+    font-size: 24px;
+    font-weight: 200;
 }
